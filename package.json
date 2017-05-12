@@ -1,0 +1,28 @@
+{
+  "name": "ok",
+  "version": "1.0.0",
+  "description": "a ok framework",
+  "main": "index.js",
+  "scripts": {
+    "build": "",
+    "dev": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kobus1998/ok.git"
+  },
+  "keywords": [
+    "css",
+    "ok",
+    "framework"
+  ],
+  "author": "kobus1998",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-sass": "^3.1.0"
+  }
+}
