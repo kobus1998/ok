@@ -7,21 +7,32 @@ const runSequence = require('run-sequence')
 const rename = require('gulp-rename')
 const uglify = require('gulp-uglify')
 
+gulp.task('browserSync', function() {
+  browserSync({
+    server: {
+      baseDir: './'
+    }
+  })
+})
+
 gulp.task('sass', () => {
   return gulp.src('src/sass/*.sass')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('dist/'))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
 })
 
-gulp.task('watch', () => {
+gulp.task('watch', function() {
   gulp.watch('src/sass/*.sass', ['sass'])
   gulp.watch('src/js/*.js', browserSync.reload)
-  gulp.watch('*.html', browserSync.reload)
 })
 
 gulp.task('dev', (callback) => {
-  runSequence(['sass', 'watch'], 'watch')
-  callback
+  runSequence(['sass', 'browserSync'], 'watch',
+  callback)
+
 })
 
 gulp.task('build:css', () => {
@@ -48,6 +59,4 @@ gulp.task('build', () => {
   runSequence(['sass','build:css', 'build:js'])
 })
 
-gulp.task('default', () => {
-  runSequence(['dev'])
-})
+gulp.task('default', ['dev'])
