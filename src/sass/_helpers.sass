@@ -1,0 +1,96 @@
+// float helpers
+.float-right
+  float: right
+
+.float-left
+  float: left
+
+.clear-float
+  clear: both
+
+// flex helpers
+.flex
+  display: flex
+
+.flex-middle
+  justify-content: center
+  align-items: center
+
+.flex-hcenter
+  justify-content: center
+
+.flex-between
+  justify-content: space-between
+
+.flex-around
+  justify-content: space-around
+
+.flex-hstart
+  justify-content: flex-start
+
+.flex-hend
+  justify-content: flex-end
+
+.flex-vcenter
+  align-items: center
+
+.flex-baseline
+  align-items: baseline
+
+.flex-vend
+  align-items: flex-end
+
+.flex-vstart
+  align-items: flex-start
+
+.flex-stretch
+  align-items: stretch
+
+.flex-grow
+  flex-grow: 1
+
+// text helpers
+.text-center
+  text-align: center
+
+.text-right
+  text-align: right
+
+.text-left
+  text-align: left
+
+// spacing helpers
+.no-margin
+  margin: 0
+
+.no-padding
+  padding: 0
+
+// responsive helpers
+.hide-mobile
+  +mediaQuery(mobile)
+    display: none
+
+.hide-tablet
+  +mediaQuery(tablet)
+    display: none
+
+.hide-laptop
+  +mediaQuery(laptop)
+    display: none
+
+.hide-desktop
+  +mediaQuery(desktop)
+    display: none
+
+.image
+  width: 100%
+  height: auto
+
+@each $color in $colors
+  .bg-#{nth($color, 1)}
+    background-color: nth($color, 2)
+
+@each $color in $colors
+  .font-#{nth($color, 1)}
+    color: nth($color, 2)

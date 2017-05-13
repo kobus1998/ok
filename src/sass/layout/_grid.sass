@@ -1,0 +1,35 @@
+.grid
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  +mediaQuery(mobile)
+    flex-direction: column
+
+  &.even
+    .col
+      flex: 1
+
+  .full-width
+    width: 100%
+
+  .width-half
+    width: 50%
+
+  .width-one-third
+    width: 100% / 3
+
+  .width-two-third
+    width: 100% / 3 * 2
+
+  .width-one-quarter
+    width: 25%
+
+  .col
+    padding: $gridGap
+    flex-grow: 1
+    @for $i from 1 through $maxCols
+      &.col-#{$i}
+        width: 100% / $maxCols * $i
+        flex-grow: 0
+        +mediaQuery(mobile)
+          width: 100%

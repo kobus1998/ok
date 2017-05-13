@@ -1,9 +1,10 @@
 .container
-  @mediaQuery(mobile)
+  margin: 0 auto
+  +mediaQuery(mobile)
     width: $container-s
-  @mediaQuery(tablet)
+  +mediaQuery(tablet)
     width: $container-m
-  @mediaQuery(laptop)
+  +mediaQuery(laptop)
     width: $container-x
-  @mediaQuery
+  +mediaQuery(desktop)
     width: $container-xl
