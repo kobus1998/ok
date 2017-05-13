@@ -1,2 +1,4 @@
 # ok
-a ok front-end framework
+A small front-end helper libary
+
+quickly setup your responsive layout
