@@ -1,0 +1,9 @@
+@mixin mediaQuery($point)
+  @if $point == mobile
+    @media (max-width: $mobile) { @content; }
+  @else if $point == tablet
+    @media (min-width: $tablet) { @content; }
+  @else if $point == laptop
+    @media (min-width: $laptop) { @content; }
+  @else if $point == desktop
+    @media (min-width: $desktop) { @content; }
