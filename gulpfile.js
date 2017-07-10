@@ -16,7 +16,7 @@ gulp.task('browserSync', function() {
 })
 
 gulp.task('sass', () => {
-  return gulp.src('src/sass/*.sass')
+  return gulp.src('src/sass/ok-framework.sass')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('dist/'))
     .pipe(browserSync.reload({
@@ -25,8 +25,14 @@ gulp.task('sass', () => {
 })
 
 gulp.task('watch', function() {
-  gulp.watch('src/sass/*.sass', ['sass'])
+  browserSync({
+    server: {
+      baseDir: './'
+    }
+  })
+  gulp.watch('src/sass/**/*.sass', ['sass'])
   gulp.watch('src/js/*.js', browserSync.reload)
+  gulp.watch('index.html', browserSync.reload)
 })
 
 gulp.task('dev', (callback) => {

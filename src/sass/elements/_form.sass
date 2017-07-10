@@ -1,0 +1,26 @@
+form
+  margin: 0.4rem
+
+.form-field
+  display: flex
+  flex-direction: column
+  margin-bottom: 1rem
+  label
+    padding: 0.4rem
+    opacity: 0.8
+  input, textarea, select
+    width: 100%
+    background-color: $white
+    padding: 0.4rem
+    outline: none
+    border-radius: 2px
+    border: 1px solid rgba($gray, 0.4)
+    position: relative
+    &:hover
+      border: 1px solid rgba($primary, 0.4)
+    &:focus
+      border: 1px solid rgba($primary, 0.8)
+  &.form-inline
+    flex-direction: row
+    .form-control
+      flex-grow: 1
