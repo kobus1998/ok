@@ -1,20 +1,22 @@
 
-// General
-$padding: .75rem
+// sizes
 $margin: .75rem
+$padding: .75rem
 
+$margin-small: .5rem
+$padding-small: .5rem
 
+$margin-large: 1.5rem
+$padding-large: 1.5rem
 
 // Responsive Sizes
-
 $mobile: 768px
 $tablet: 768px
 $laptop: 1024px
 $desktop: 1440px
 
 // grid
-
-$gridGap: 0 .4rem
+$gridGap: $margin
 
 $container-xl: 1024px
 $container-x: 860px
@@ -24,7 +26,6 @@ $container-s: 100%
 $maxCols: 12
 
 // Colors
-
 $red: #F44336
 $pink: #E91E63
 $purple: #9C27B0
@@ -47,16 +48,24 @@ $blueGray: #607D8B
 $black: #000000
 $white: #ffffff
 
-
 $colors: (red $red, pink $pink, purple $purple, deepPurple $deepPurple, indigo $indigo, blue $blue, lightBlue $lightBlue, cyan $cyan, teal $teal, green $green, lightGreen $lightGreen, lime $lime, yellow $yellow, amber $amber, orange $orange, deepOrange $deepOrange, brown $brown, gray $gray, blueGray $blueGray, black $black, white $white)
 
-$background: #fff
-
-$primary: $indigo
+$background: $white
+$primary: $deepOrange
 $secondary: lighten($primary, 15%)
 
-// Typography
+$header-background: $primary
+$header-height: 3.3em
 
+// border
+$border: 1px solid rgba($gray, 0.4)
+$border-hover: 1px solid rgba($primary, 0.4)
+$border-focus: 1px solid rgba($primary, 0.8)
+
+// shaodw
+$shadow: 2px 2px 2px rgba($gray, 0.3)
+
+// Typography
 $fontFamily: 'Montserrat', sans-serif
 $fontColor: $black
 

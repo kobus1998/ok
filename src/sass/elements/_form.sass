@@ -1,25 +1,26 @@
-form
-  margin: 0.4rem
-
 .form-field
   display: flex
   flex-direction: column
-  margin-bottom: 1rem
+  margin-bottom: $margin
   label
-    padding: 0.4rem
+    padding: $padding-small $padding
     opacity: 0.8
+    font-size: 1rem
   input, textarea, select
     width: 100%
     background-color: $white
-    padding: 0.4rem
+    padding: $padding-small $padding
     outline: none
-    border-radius: 2px
-    border: 1px solid rgba($gray, 0.4)
+    border-radius: 3px
+    border: $border
     position: relative
+    box-shadow: $shadow
+    border-radius: 3px
+    font-size: 1rem
     &:hover
-      border: 1px solid rgba($primary, 0.4)
+      border: $border-hover
     &:focus
-      border: 1px solid rgba($primary, 0.8)
+      border: $border-focus
   &.form-inline
     flex-direction: row
     .form-control

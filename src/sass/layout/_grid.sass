@@ -9,27 +9,30 @@
     .col
       flex: 1
 
-  .full-width
+  .col-full
     width: 100%
 
-  .width-half
+  .col-half
     width: 50%
 
-  .width-one-third
-    width: 100% / 3
+  .col-one-third
+    width: calc(100% / 3)
 
-  .width-two-third
-    width: 100% / 3 * 2
+  .col-two-third
+    width: calc(100% / 3 * 2)
 
-  .width-one-quarter
+  .col-one-quarter
     width: 25%
 
   .col
     padding: $gridGap
     flex-grow: 1
+    +mediaQuery(mobile)
+      width: 100%
+    &.box
+      border-radius: 5px
+      border: $border
     @for $i from 1 through $maxCols
       &.col-#{$i}
         width: 100% / $maxCols * $i
         flex-grow: 0
-        +mediaQuery(mobile)
-          width: 100%

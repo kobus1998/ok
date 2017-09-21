@@ -5,27 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>A Ok framework</title>
-  <link rel="stylesheet" href="dist/ok-framework.min.css">
+  <link rel="stylesheet" href="dist/ok-framework.css">
 </head>
 <body>
   <div class="wrapper">
 
-    <header class="header bg-red">HEADER</header>
-    <main class="body bg-orange">
-      <div class="container grid even bg-deepPurple font-red">
-        <div class="col col-1">
-          col one
+    <header class="header">
+      <div class="container">
+        <div class="nav-left">
+          <img class="brand" src="https://placehold.it/150x150" alt="">
         </div>
-        <div class="col col-1">
-          col two
+
+        <div class="nav-right">
+          <div class="nav-menu">
+            <ul>
+              <li class="active"><a href="">home</a></li>
+              <li><a href="">about</a></li>
+              <li><a href="">contact</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="col col-1">
-          col three
-        </div>
-        <div class="col bg-blue">
-          col four
-        </div>
+
       </div>
+    </header>
+    <main class="body">
+
+      <div class="container">
+
+        <div class="grid flex flex-j-center">
+          <form class="col">
+            <h3>Register</h3>
+
+            <div class="form-field">
+              <label for="">Username</label>
+              <div class="form-control">
+                <input type="text">
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="">Bio</label>
+              <div class="form-control">
+                <textarea name="name" rows="8" cols="80"></textarea>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="">Gender</label>
+              <div class="form-control">
+                <select class="" name="">
+                  <option value=""></option>
+                  <option value="">Male</option>
+                  <option value="">Female</option>
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+
+
+
     </main>
     <footer class="footer">FOOTER</footer>
 

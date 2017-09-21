@@ -1,0 +1,89 @@
+// sizes
+$margin: .75rem
+$padding: .75rem
+
+$margin-small: .5rem
+$padding-small: .5rem
+
+$margin-large: 1.5rem
+$padding-large: 1.5rem
+
+// Responsive Sizes
+$mobile: 768px
+$tablet: 768px
+$laptop: 1024px
+$desktop: 1440px
+
+// grid
+$gridGap: $margin
+
+$container-xl: 1024px
+$container-x: 860px
+$container-m: 680px
+$container-s: 100%
+
+$maxCols: 12
+
+=mediaQuery($point)
+  @if $point == mobile
+    @media (max-width: $mobile)
+      @content
+  @else if $point == tablet
+    @media (min-width: $tablet)
+      @content
+  @else if $point == laptop
+    @media (min-width: $laptop)
+      @content
+  @else if $point == desktop
+    @media (min-width: $desktop)
+      @content
+
+
+.container
+  margin: 0 auto
+  display: block
+  clear: both
+  +mediaQuery(mobile)
+    width: $container-s
+  +mediaQuery(tablet)
+    width: $container-m
+  +mediaQuery(laptop)
+    width: $container-x
+  +mediaQuery(desktop)
+    width: $container-xl
+
+.grid
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  +mediaQuery(mobile)
+    flex-direction: column
+
+  &.even
+    .col
+      flex: 1
+
+  .col-full
+    width: 100%
+
+  .col-half
+    width: 50%
+
+  .col-one-third
+    width: calc(100% / 3)
+
+  .col-two-third
+    width: calc(100% / 3 * 2)
+
+  .col-one-quarter
+    width: 25%
+
+  .col
+    padding: $gridGap
+    flex-grow: 1
+    +mediaQuery(mobile)
+      width: 100%
+    @for $i from 1 through $maxCols
+      &.col-#{$i}
+        width: 100% / $maxCols * $i
+        flex-grow: 0

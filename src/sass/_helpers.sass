@@ -1,74 +1,101 @@
 // float helpers
-.float-right
-  float: right
-
-.float-left
-  float: left
-
-.clear-float
-  clear: both
+.float
+  &-right
+    float: right
+  &-left
+    float: left
+  &-clear
+    clear: both
 
 // flex helpers
+
+.flex-center-full
+  display: flex
+  justify-content: center
+  align-items: center
+
+.flex-h-center
+  display: flex
+  justify-content: center
+
+.flex-a-center
+  display: flex
+  align-items: center
+
 .flex
   display: flex
-
-.flex-middle
-  justify-content: center
-  align-items: center
-
-.flex-hcenter
-  justify-content: center
-
-.flex-between
-  justify-content: space-between
-
-.flex-around
-  justify-content: space-around
-
-.flex-hstart
-  justify-content: flex-start
-
-.flex-hend
-  justify-content: flex-end
-
-.flex-vcenter
-  align-items: center
-
-.flex-baseline
-  align-items: baseline
-
-.flex-vend
-  align-items: flex-end
-
-.flex-vstart
-  align-items: flex-start
-
-.flex-stretch
-  align-items: stretch
-
-.flex-grow
-  flex-grow: 1
+  &-j
+    &-middle
+      justify-content: center
+      align-items: center
+    &-center
+      justify-content: center
+    &-between
+      justify-content: space-between
+    &-around
+      justify-content: space-around
+    &-start
+      justify-content: flex-start
+    &-end
+      justify-content: flex-end
+  &-a
+    &-center
+      align-items: center
+    &-baseline
+      align-items: baseline
+    &-end
+      align-items: flex-end
+    &-start
+      align-items: flex-start
+    &-stretch
+      align-items: stretch
+  &-grow
+    flex-grow: 1
 
 // text helpers
-.text-center
-  text-align: center
-
-.text-right
-  text-align: right
-
-.text-left
-  text-align: left
+.text
+  &-center
+    text-align: center
+  &-right
+    text-align: right
+  &-left
+    text-align: left
 
 // spacing helpers
-.no-margin
-  margin: 0
+.margin
+  &-left
+    margin-left: $margin
+  &-right
+    margin-right: $margin
+  &-top
+    margin-top: $margin
+  &-bottom
+    margin-bottom: $margin
+  &-none
+    margin: 0
 
-.no-padding
-  padding: 0
+.padding
+  &-left
+    padding-left: $padding
+  &-right
+    padding-right: $padding
+  &-top
+    padding-top: $padding
+  &-bottom
+    padding-bottom: $padding
+  &-none
+    padding: 0
+
 
 .image
   width: 100%
   height: auto
+
+.border
+  border: $border
+
+.shadow
+  box-shadow: $shadow
 
 @each $color in $colors
   .bg-#{nth($color, 1)}
